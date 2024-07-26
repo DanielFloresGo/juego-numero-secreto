@@ -19,7 +19,6 @@ function verificarIntento() {
     //Se extrae el número del input y se transforma de cadena a numero.
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
 
-    console.log(intentos);
     if (numeroDeUsuario === numeroSecreto) {
         //Se hace una condición con el operador ternario. 
         asignarTextoElemento('p', `Acertaste el número en ${intentos} ${(intentos === 1) ? 'vez' : 'veces'}`);
@@ -42,9 +41,6 @@ function verificarIntento() {
 //Esta función se vuelve a ejecutar si la condición se cumple.
 function generarNumeroSecreto() {
     let numeroGenerado = Math.floor(Math.random() * numeroMaximo + 1);
-
-    console.log(numeroGenerado);
-    console.log(listaNumerosSorteados);
 
     if (listaNumerosSorteados.length == numeroMaximo) {
         asignarTextoElemento('p', 'Ya se sortearon todos los números posibles');
